@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<?php require 'partials/header.php' ?>
     <h1>Login</h1>
 <form action="login.php" method="POST">
       <input name="email" type="text" placeholder="Enter your email">
