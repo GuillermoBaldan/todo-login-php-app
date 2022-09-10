@@ -13,7 +13,7 @@ if(isset($_POST['save_task'])){
     }
 
     $_SESSION['message'] = 'Task Saved succesfully';
-    $_SESSION['message_type'] = 'sucess';
+    $_SESSION['message_type'] = 'success';
 
     header("Location: index.php");
 }
