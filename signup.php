@@ -14,8 +14,9 @@
    <span> or <a href="login.php">Login</a></span>
    <form action="signup.php" method="POST">
       <input name="email" type="text" placeholder="Enter your email">
-      <input name="password" type="confirm_password" placeholder="Enter your Password">
-      <input type="submit" value="Submit">
+      <input name="password" type="password" placeholder="Enter your password">
+      <input name="confirm_password" type="password" placeholder="Confirm your password">
+      <input type="submit" value="Send">
     </form>
 </form>
 </body>
