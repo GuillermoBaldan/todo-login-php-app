@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
   session_start();
 
@@ -43,7 +42,6 @@
     <?php endif; ?>
   </body>
 </html>
-=======
 <?php include("db.php") ?>
 
 <?php include("includes/header.php") ?>
@@ -113,4 +111,3 @@
 <?php include("includes/footer.php") ?>
 
 
->>>>>>> ef831fa36b10c90217e9ca07b9721dd8e98841d3
