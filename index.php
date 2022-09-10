@@ -17,14 +17,6 @@
   }
 ?>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>TODO LOGIN APP</title>
-
-  </head>
-  <body>
     <?php require 'partials/header.php' ?>
 
     <?php if(!empty($user)): ?>
