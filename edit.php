@@ -35,12 +35,12 @@ if (isset($_POST['update'])) {
       <div class="card card-body">
       <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
         <div class="form-group">
-          <input name="title" type="text" class="form-control" value="<?php echo $title; ?>" placeholder="Update Title">
+          <input name="title" type="text" class="form-control mt-2" value="<?php echo $title; ?>" placeholder="Update Title">
         </div>
         <div class="form-group">
-        <textarea name="description" class="form-control" cols="30" rows="10"><?php echo $description;?></textarea>
+        <textarea name="description" class="form-control mt-2" cols="30" rows="10"><?php echo $description;?></textarea>
         </div>
-        <button class="btn btn-success" name="update">
+        <button class="btn btn-success mt-2" name="update">
           Update
 </button>
       </form>
