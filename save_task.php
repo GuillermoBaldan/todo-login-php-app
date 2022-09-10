@@ -12,7 +12,7 @@ if(isset($_POST['save_task'])){
         die("Query Failed");
     }
 
-    echo 'Saved';
+    header("Location: index.php");
 }
 
 ?>
