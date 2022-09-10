@@ -21,9 +21,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Welcome to you WebApp</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>TODO LOGIN APP</title>
+
   </head>
   <body>
     <?php require 'partials/header.php' ?>
