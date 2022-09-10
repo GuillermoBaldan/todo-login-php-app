@@ -7,14 +7,14 @@
             <div class="card card-body">
                 <form action="">
                     <div class = "form-group">
-                        <input type="text" name="title" class="form-control"
+                        <input type="text" name="title" class="form-control mt-2"
                         placeholder="Task Title" autofocus>
                     </div>
                     <div class="formgroup">
-                        <textarea name="description" row="2" class="form-control"
+                        <textarea name="description" row="2" class="form-control mt-2"
                         placeholder="Task Description"></textarea>
                     </div>
-                    <input type="submit" class="btn btn-success btn-block" name="save_task" value="Save Task">
+                    <input type="submit" class="btn btn-success btn-block mt-2" name="save_task" value="Save Task">
                 </form>
             </div>
         </div>
