@@ -10,6 +10,11 @@
                         <input type="text" name="title" class="form-control"
                         placeholder="Task Title" autofocus>
                     </div>
+                    <div class="formgroup">
+                        <textarea name="description" row="2" class="form-control"
+                        placeholder="Task Description"></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-success btn-block" name="save_task" value="Save Task">
                 </form>
             </div>
         </div>
