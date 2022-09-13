@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<?php require 'partials/header.php' ?>
     <h1>Login</h1>
     <span> or <a href="signup.php">Signup</a></span>
 

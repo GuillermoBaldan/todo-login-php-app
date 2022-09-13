@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-  require 'db.php';
+  require 'database.php';
 
   if (isset($_SESSION['user_id'])) {
     $records = $conn->prepare('SELECT id, email, password FROM users WHERE id = :id');
@@ -16,7 +16,17 @@
     }
   }
 ?>
-    <?php include("includes/header.php") ?>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to you WebApp</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <?php require 'partials/header.php' ?>
 
     <?php if(!empty($user)): ?>
       <br> Welcome. <?= $user['email']; ?>
@@ -32,12 +42,3 @@
     <?php endif; ?>
   </body>
 </html>
-<?php include("db.php") ?>
-
-
-
-
-
-<?php include("includes/footer.php") ?>
-
-
