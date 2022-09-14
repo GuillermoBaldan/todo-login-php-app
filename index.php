@@ -1,5 +1,7 @@
 <?php
-  session_start();
+//init_set('display_errors',1);
+error_reporting(E_ALL);
+session_start();
 
   require 'database.php';
 
@@ -7,12 +9,25 @@
     $records = $conn->prepare('SELECT id, email, password FROM users WHERE id = :id');
     $records->bindParam(':id', $_SESSION['user_id']);
     $records->execute();
-    $results = $records->fetch(PDO::FETCH_ASSOC);
+    $user_results = $records->fetch(PDO::FETCH_ASSOC);
+
+    $records = $conn->prepare('SELECT title, description FROM tasks WHERE id_user = :id');
+    $records->bindParam(':id', $_SESSION['user_id']);
+    $records->execute();
+    //$task_results = mysqli_fetch_rows($records);
+   
+    //$task_results = $records->fetch(PDO::FETCH_ASSOC);
+    //$task_results2 = $records->fetch(PDO::FETCH_ASSOC);
+
+    //print_r($task_results);
+    //print_r($task_results2);
 
     $user = null;
 
-    if (count($results) > 0) {
-      $user = $results;
+   
+
+    if (count($user_results) > 0) {
+      $user = $user_results;
     }
   }
 ?>
@@ -30,7 +45,12 @@
 
     <?php if(!empty($user)): ?>
       <br> Welcome. <?= $user['email']; ?>
-      <br>You are Successfully Logged In
+      <?php 
+          while($f=$records->fetch(PDO::FETCH_ASSOC)){
+            echo '<p>'.$f['title'].$f['description'].'</p>';
+       };
+      ?>
+         <br>You are Successfully Logged In
       <a href="logout.php">
         Logout
       </a>
