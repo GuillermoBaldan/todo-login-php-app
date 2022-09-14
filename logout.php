@@ -5,5 +5,5 @@
 
   session_destroy();
 
-  header('Location: /login-and-register-PHP');
+  header('Location: /todo-login-php-app');
 ?>
