@@ -1,35 +1,31 @@
 <?php
-//init_set('display_errors',1);
-error_reporting(E_ALL);
-session_start();
+  ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
+  session_start();
 
   require 'database.php';
 
+  $user = null;
+  
   if (isset($_SESSION['user_id'])) {
-    $records = $conn->prepare('SELECT id, email, password FROM users WHERE id = :id');
-    $records->bindParam(':id', $_SESSION['user_id']);
-    $records->execute();
-    $user_results = $records->fetch(PDO::FETCH_ASSOC);
+    
+    // $records = $conn->prepare('SELECT id, email, password FROM users WHERE id = :id');
+    // $records->bindParam(':id', $_SESSION['user_id']);
+    // $records->execute();
+    // $results = $records->fetch(PDO::FETCH_ASSOC);
 
-    $records = $conn->prepare('SELECT title, description FROM tasks WHERE id_user = :id');
-    $records->bindParam(':id', $_SESSION['user_id']);
-    $records->execute();
-    //$task_results = mysqli_fetch_rows($records);
-   
-    //$task_results = $records->fetch(PDO::FETCH_ASSOC);
-    //$task_results2 = $records->fetch(PDO::FETCH_ASSOC);
+    // $user = null;
 
-    //print_r($task_results);
-    //print_r($task_results2);
+    // if (count($results) > 0) {
+    //   $user = $results;
+    // }
 
-    $user = null;
-
-   
-
-    if (count($user_results) > 0) {
-      $user = $user_results;
-    }
-  }
+    /******************************* */
+    $user['id'] = $_SESSION['user_id'];
+    print_r($email);
+    /******************************* */
+    
+  } 
+ 
 ?>
 
 <!DOCTYPE html>
@@ -45,12 +41,7 @@ session_start();
 
     <?php if(!empty($user)): ?>
       <br> Welcome. <?= $user['email']; ?>
-      <?php 
-          while($f=$records->fetch(PDO::FETCH_ASSOC)){
-            echo '<p>'.$f['title'].$f['description'].'</p>';
-       };
-      ?>
-         <br>You are Successfully Logged In
+             <br>You are Successfully Logged In
       <a href="logout.php">
         Logout
       </a>
