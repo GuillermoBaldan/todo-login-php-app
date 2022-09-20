@@ -11,7 +11,7 @@
 //   die('Connection Failed: ' . $error->getMessage());
 // }
 
-function conexionBD(){
+/* function conexionBD(){
 
   $server     = 'localhost:3306';
   $username   = 'root';
@@ -26,5 +26,13 @@ function conexionBD(){
       return $bd;
   }
 }
+
+?> */
+$server     = 'localhost:3306';
+  $username   = 'root';
+  $password   = '';
+  $database   = 'todo_login';
+
+  $conn = mysqli_connect($server, $username, $password, $database);
 
 ?>

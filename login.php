@@ -28,7 +28,7 @@
     $password = $_POST['password'];
     
     $sql = "SELECT id, password FROM users WHERE email = '$email';";
-    $bd = conexionBD();
+    $bd = $conn;
     
     $result = $bd->query($sql);
     $bd->close();
